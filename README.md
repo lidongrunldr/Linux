@@ -101,3 +101,7 @@ nano ./<文件夹1>/<文件夹2>/<文件名>
 yum install nano
 ```
 来安装`nano`
+## 查看cpu信息
+```
+lscpu
+```
