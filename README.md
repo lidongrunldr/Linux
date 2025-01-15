@@ -97,8 +97,18 @@ cp -r ./<文件夹1>/<文件夹2> ./<文件夹1>/<文件夹2>/<文件夹3>
 ll ~
 ```
 `~`表示当前目录
+## 跨服务器拷贝
+把本地的source.txt文件拷贝到用户名为root的192.168.0.10机器上的/home/work目录下
 ```
-
+scp /home/work/source.txt root@192.168.0.10:/home/work/
+```
+把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下
+```
+scp root@192.168.0.10:/home/work/source.txt /home/work/
+```
+把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下
+```
+scp root@192.168.0.10:/home/work/source.txt root@192.168.0.11:/home/work/ 
 ```
 ## 文件的创建
 * 创建文件
