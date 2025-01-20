@@ -37,6 +37,20 @@ tab可自动填充，连点两下tab可以查看当前可进入的目录且不�
 ```
 mv
 ```
+## 文件重命名
+```
+mv -i <老文件名>.grib <新文件名>.grib2
+```
+加上`-i`防止重命名错了文件，会有交互
+```
+yum insatll rename
+rename testfile tt testfile*.log
+```
+可以实现批量将名为testfile1.log testfile2.log testfile3.log 批量命名为tt1.log tt2.log tt3.log
+```
+rename .log .txt *.log
+```
+可以批量重命名后缀为.log的文件为后缀.txt
 ## 删除文件
 ```
 rm /dir1/dir2/test.py
