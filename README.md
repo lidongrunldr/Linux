@@ -46,11 +46,11 @@ mv -i <老文件名>.grib <新文件名>.grib2
 yum insatll rename
 rename testfile tt testfile*.log
 ```
-可以实现批量将名为testfile1.log testfile2.log testfile3.log 批量命名为tt1.log tt2.log tt3.log
+可以实现批量将名为`testfile1.log testfile2.log testfile3.log `批量命名为`tt1.log tt2.log tt3.log`
 ```
 rename .log .txt *.log
 ```
-可以批量重命名后缀为.log的文件为后缀.txt
+可以批量重命名后缀为`.log`的文件为后缀`.txt`
 总结：
 ```
 rename (想要替换的部分) (替换成的内容) (想要替换的文件全名)
