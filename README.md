@@ -51,6 +51,10 @@ rename testfile tt testfile*.log
 rename .log .txt *.log
 ```
 可以批量重命名后缀为.log的文件为后缀.txt
+总结：
+```
+rename (想要替换的部分) (替换成的内容) (想要替换的文件全名)
+```
 ## 删除文件
 ```
 rm /dir1/dir2/test.py
