@@ -242,3 +242,16 @@ xz -d <文件名>.xz
 tar -xvf <文件名>.tar
 ```
 `-x`从归档文件中提取文件，`-v`显示详细信息，`-f`指定归档文档名
+## 更改文件夹访问权限
+* 查看访问权限
+```
+ls -l /home/account702893/.conda/envs/wuwu/bin/python
+```
+* 为所有用户添加访问权限
+```
+chmod +x /home/account702893/.conda/envs/wuwu/bin/python
+```
+* 只为当前用户添加访问权限
+```
+chmod u+x /home/account702893/.conda/envs/wuwu/bin/python
+```
