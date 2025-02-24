@@ -181,9 +181,32 @@ yum install nano
 ```
 来安装`nano`
 ## 终止进程
+* 强制终止进程
 ```
-kill
+kill -9 <PID>
 ```
+有些时候`kill <PID>`也可以，但实际上就是`crtl+c`如果`ctrl+c`仍然结束不了进程，直接加个`-9`强制结束
+* 查询PID
+三种方法
+1.
+```
+nvidia-smi
+```
+用查询显卡信息的方法的最下面一栏有显示进程信息
+2.
+```
+ps aux | grep python 
+```
+会列出所有包含`python`的进程名及id 进程名可以替换
+3.
+```
+sudo apt-get install hotp
+```
+安装`hotp`图形化界面
+```
+hotp
+```
+启动
 ## 发送HTTP请求
 ```
 curl
