@@ -279,3 +279,21 @@ chmod +x /home/account702893/.conda/envs/wuwu/bin/python
 ```
 chmod u+x /home/account702893/.conda/envs/wuwu/bin/python
 ```
+## shell脚本的编写
+例子见项目文件
+* shebang行
+```
+#!/bin/bash
+```
+指定了脚本执行的解释器是bash
+* for循环
+```
+for i in {1..32}
+do
+    <想要循环的指令>
+```
+从1-32循环
+* 编写完后记得要给shell文件开放执行权限
+```
+chmod u+x /文件路径/test.sh
+```
