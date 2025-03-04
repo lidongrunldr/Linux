@@ -86,6 +86,7 @@ head <文件路径>
 tail <文件路径>
 ```
 假如文件路径如下：
+```
 project-name/
 │
 ├── dir1/
@@ -100,6 +101,7 @@ project-name/
 └── dir3/
     ├── file4.ext
     └── file5.ext
+```
 假如当前的工作路径为project-name，想要读取`file3.ext`文件，则需要
 ```
 cat ./dir2/sub-dir1/file3.ext
@@ -194,11 +196,13 @@ kill -9 <PID>
 nvidia-smi
 ```
 用查询显卡信息的方法的最下面一栏有显示进程信息
+
 2.
 ```
 ps aux | grep python 
 ```
 会列出所有包含`python`的进程名及id 进程名可以替换
+
 3.
 ```
 sudo apt-get install hotp
