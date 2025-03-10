@@ -10,6 +10,14 @@ ipconfig
 ```
 pwd
 ```
+## 查看文件或文件夹路径是否正确
+```
+ls /mnt/ssd1/account702893/DecisionGroup/pingce/2024_sfc.grib
+```
+## 查看文件类型或是否损坏
+```
+file /mnt/ssd1/account702893/DecisionGroup/pingce/2024_sfc.grib
+```
 ## 进出文件夹
 * 进入文件夹
 ```
@@ -182,8 +190,9 @@ nano ./<文件夹1>/<文件夹2>/<文件名>
 yum install nano
 ```
 来安装`nano`
-写完后`ctrl+o`保存，回车确认`ctrl+x`退出
-`ctrl+_`后输入行数，可以直接跳转到该行，`ctrl+#`然后再`shift+#`可以在左侧显示行数。
+写完后`ctrl+o`保存，回车确认`ctrl+x`退出 <br>
+`ctrl+_`后输入行数，可以直接跳转到该行，`ctrl+#`然后再`shift+#`可以在左侧显示行数。<br>
+`ctrl+w`查找关键词
 ## 终止进程
 * 强制终止进程
 ```
@@ -287,6 +296,10 @@ chmod +x /home/account702893/.conda/envs/wuwu/bin/python
 * 只为当前用户添加访问权限
 ```
 chmod u+x /home/account702893/.conda/envs/wuwu/bin/python
+```
+* 以管理员身份更改
+```
+sudo chmod 644 /home/account702893/.conda/envs/wuwu/bin/python
 ```
 ## shell脚本的编写
 例子见项目文件
