@@ -23,14 +23,21 @@ for j in {2023..2024}; do
         # 日期循环
         for i in $(seq 1 $last_day); do
             date=$(printf "%02d" "$i")
-            # 执行模型命令（完整路径示例）
+            output_dir="/mnt/ssd1/account702893/DecisionGroup/pingce2/fengwu/result_cn/D${j}/${j}${month}${date}/18"
+            # 执行模型命令
             ai-models --assets "Fengwu_EC/" \
                     --input cds \
                     --date "${j}${month}${date}" \
                     --time 1800 \
                     fengwuv2 \
                     --lead-time 360 \
-                    --path "/mnt/ssd1/account702893/DecisionGroup/pingce2/fengwu/result_cn/D${j}/${j}${month}${date}/18/${j}${month}${date}_18_output_cn.grib"
+                    --path "${output_dir}/${j}${month}${date}_18_output_cn.grib"
+            python /path/to/crop.py \
+                    --input "${output_dir}/${j}${month}${date}_18_output_cn.grib" \
+                    --year "$j" \
+                    --month "$((10#${month}))" \
+                    --day "$((10#${date}))" \
+            && rm -f "${output_dir}/${j}${month}${date}_18_output_cn.grib"
         done
     done
 done
