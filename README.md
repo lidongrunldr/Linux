@@ -319,3 +319,20 @@ do
 ```
 chmod u+x /文件路径/test.sh
 ```
+## 日志保存
+* 静默运行
+覆盖模式（每次运行清空旧内容）
+```
+bash inference.sh > info.log 2>&1
+```
+追加模式（保留历史日志）
+```
+bash inference.sh >> info.log 2>&1
+```
+*实时显示输出并保存副本
+```
+bash inference.sh > info.log 2>&1 | tee inference.log
+```
+```
+bash inference.sh > info.log 2>&1 | tee -a inference.log
+```
