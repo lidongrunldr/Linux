@@ -332,9 +332,9 @@ bash inference.sh >> info.log 2>&1
 * 实时显示输出并保存副本
 覆盖模式
 ```
-bash inference.sh > info.log 2>&1 | tee inference.log
+bash inference.sh 2>&1 | tee info.log
 ```
 追加模式
 ```
-bash inference.sh > info.log 2>&1 | tee -a inference.log
+bash inference.sh 2>&1 | tee -a info.log
 ```
