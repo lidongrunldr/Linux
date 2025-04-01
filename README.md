@@ -193,6 +193,8 @@ yum install nano
 写完后`ctrl+o`保存，回车确认`ctrl+x`退出 <br>
 `ctrl+_`后输入行数，可以直接跳转到该行，`ctrl+#`然后再`shift+#`可以在左侧显示行数。<br>
 `ctrl+w`查找关键词
+`ctrl+v`向下翻页
+`ctrl+_`跳转到某一行（注意，在mac中必须使用`shift+_+control`,才行，顺序不能错）
 ## 终止进程
 * 强制终止进程
 ```
