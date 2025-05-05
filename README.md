@@ -340,3 +340,31 @@ bash inference.sh 2>&1 | tee info.log
 ```
 bash inference.sh 2>&1 | tee -a info.log
 ```
+
+## screen使用
+screen可以远程后台运行代码，本地断网关机都不会影响代码运行，只要连接的服务器所在的物理地址不被断电
+* screen安装
+```
+yum install screen
+```
+* 新建screen
+```
+screen -S <屏幕名>
+```
+* 检查当前工作路径下所有screen
+```
+screen -ls
+```
+* 打开指定screen
+```
+screen -r <ip.名字>
+```
+* 删除指定的screen
+```
+screen -X -S <ip.名字> quit
+```
+* 关掉当前的screen（不影响当前代码的运行）
+```
+crtl+a+d
+```
+
